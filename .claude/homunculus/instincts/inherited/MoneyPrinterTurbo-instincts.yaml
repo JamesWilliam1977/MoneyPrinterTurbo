@@ -1,0 +1,388 @@
+# Instincts generated from https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+# Generated: 2026-06-01T06:05:30.272Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: MoneyPrinterTurbo-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Commit Length
+
+## Action
+
+Write moderate-length commit messages (~53 characters)
+
+## Evidence
+
+- Average commit message length: 53 chars
+- Based on 3 commits
+
+---
+id: MoneyPrinterTurbo-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: MoneyPrinterTurbo-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: MoneyPrinterTurbo-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: MoneyPrinterTurbo-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: MoneyPrinterTurbo-workflow-refactor-hardcoded-data-to-json
+trigger: "when doing refactor hardcoded data to json"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# MoneyPrinterTurbo Workflow Refactor Hardcoded Data To Json
+
+## Action
+
+Follow the refactor-hardcoded-data-to-json workflow:
+1. Create a new JSON file in the appropriate data directory with the extracted data.
+2. Modify the relevant Python service to load data from the new JSON file, using a helper or caching if needed.
+3. Add or update regression tests to confirm the refactor does not change behavior.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: app/services/data/*.json, app/services/*.py, test/services/test_*.py
+
+---
+id: moneyprinterturbo-instinct-file-naming-camelcase
+trigger: "When creating a new Python file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct File Naming Camelcase
+
+## Action
+
+Name the file using camelCase (e.g., myService.py)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Observed in app/ and webui/ folders
+
+---
+id: moneyprinterturbo-instinct-function-naming-camelcase
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Function Naming Camelcase
+
+## Action
+
+Name the function using camelCase (e.g., loadDataFromJson)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+- Seen in app/services/*.py
+
+---
+id: moneyprinterturbo-instinct-class-naming-pascalcase
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Class Naming Pascalcase
+
+## Action
+
+Name the class using PascalCase (e.g., DataLoader)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+- Seen in app/services/*.py
+
+---
+id: moneyprinterturbo-instinct-constant-naming-screaming-snake-case
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Constant Naming Screaming Snake Case
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., DEFAULT_TIMEOUT)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+- Seen in app/services/*.py
+
+---
+id: moneyprinterturbo-instinct-import-relative
+trigger: "When importing modules within the package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Import Relative
+
+## Action
+
+Use relative imports (e.g., from .helpers import foo)
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+- Seen in app/services/*.py
+
+---
+id: moneyprinterturbo-instinct-export-named
+trigger: "When exporting functions or classes"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Export Named
+
+## Action
+
+Use named exports (explicitly list exported symbols in __all__)
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+- Seen in app/services/*.py
+
+---
+id: moneyprinterturbo-instinct-test-location-separate
+trigger: "When adding tests for a module"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Test Location Separate
+
+## Action
+
+Place tests in the separate 'test' folder, mirroring the structure of the source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+- Seen in test/services/test_*.py
+
+---
+id: moneyprinterturbo-instinct-test-naming-prefix
+trigger: "When naming a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Test Naming Prefix
+
+## Action
+
+Prefix the filename with 'test_' (e.g., test_myService.py)
+
+## Evidence
+
+- Pattern in test/services/test_*.py
+
+---
+id: moneyprinterturbo-instinct-test-for-refactor
+trigger: "When refactoring code to extract data to JSON"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Test For Refactor
+
+## Action
+
+Add or update regression tests to confirm the refactor does not change behavior
+
+## Evidence
+
+- Workflow 'refactor-hardcoded-data-to-json'
+- Commit sequence includes test update
+
+---
+id: moneyprinterturbo-instinct-commit-prefix-refactor
+trigger: "When making a refactor commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Commit Prefix Refactor
+
+## Action
+
+Prefix the commit message with 'refactor' and specify the scope (e.g., refactor(voice): ...)
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in commit 'refactor(voice): extract Azure voice data to JSON'
+
+---
+id: moneyprinterturbo-instinct-commit-length-medium
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Commit Length Medium
+
+## Action
+
+Keep the commit message concise, around 50 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Examples in commit history
+
+---
+id: moneyprinterturbo-instinct-merge-pr-refactor
+trigger: "When merging a pull request for a refactor"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Merge Pr Refactor
+
+## Action
+
+Use the format 'Merge pull request #[number] from [branch]' in the merge commit
+
+## Evidence
+
+- Seen in commit 'Merge pull request #951 from domantasjo/refactor/extract-azure-voices-to-json'
+
+---
+id: moneyprinterturbo-instinct-refactor-hardcoded-data-to-json
+trigger: "When large hardcoded data structures are present in Python source files and maintainability is a concern"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: JamesWilliam1977/MoneyPrinterTurbo
+---
+
+# Moneyprinterturbo Instinct Refactor Hardcoded Data To Json
+
+## Action
+
+Extract the data to a new JSON file in app/services/data, update the Python service to load from JSON, and add regression tests to ensure unchanged behavior
+
+## Evidence
+
+- Workflow 'refactor-hardcoded-data-to-json'
+- Commit sequence and files involved
+
